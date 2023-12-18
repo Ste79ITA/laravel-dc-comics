@@ -7,7 +7,8 @@
 <section class="py-5">
     <div class="container d-flex flex-column align-items-center">
         <h1 class="title">COMICS</h1>
-        <div class="comic-row row d-flex">
+        <a class="btn btn-primary" href="{{ route('comics.create') }}">Crea Nuovo Fumetto</a>
+        <div class="comic-row row d-flex ">
             @foreach ($comics as $comic)
             <div class="col-2 p-3">
                 <a href="{{ route('comics.show', $comic) }}">

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'TITOLO')
+@section('title', $comic->title )
 <section class="py-5 details">
     <div class="container d-flex pt-5">
         <div class="">
