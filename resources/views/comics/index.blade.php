@@ -10,7 +10,7 @@
         <div class="comic-row row d-flex">
             @foreach ($comics as $comic)
             <div class="col-2 p-3">
-                <a href="#">
+                <a href="{{ route('comics.show', $comic) }}">
                     <div class="img-container">
                         <img src="{{ $comic['thumb'] }}" alt="">
                     </div>
