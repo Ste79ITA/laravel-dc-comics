@@ -1,0 +1,22 @@
+section {
+    background-color: black;
+
+    .img-container {
+        width: 150px;
+        aspect-ratio: 1;
+        overflow: hidden;
+        object-fit: fill;
+        img {
+            width: 100%;
+        }
+    }
+    .title {
+        font-size: 50px;
+    }
+
+    .comic-title {
+        color: white;
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+}
