@@ -16,9 +16,19 @@
                         <img src="{{ $comic['thumb'] }}" alt="">
                     </div>
                     <p class="comic-title pt-2">{{ $comic['title'] }}</p>
-                    <div>
+                    <div class="d-flex gap-4">
                         <span><a href="{{ route('comics.edit', $comic) }}" class="btn btn-secondary btn-sm">Edit</a></span>
-                        <span><a href="" class="btn btn-secondary btn-sm">Delete</a></span>
+                        <span>
+                            <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+                        
+                                @csrf
+    
+                                @method('DELETE')
+    
+                                <input class="btn btn-secondary btn-sm" type="submit" value="Cancel">
+                            </form>
+                        </span>
+                        
                     </div>
                 </a>
             </div>
