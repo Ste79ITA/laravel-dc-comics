@@ -7,7 +7,7 @@
     <div class="container d-flex flex-column pt-5">
         <h1>Edit a Comic</h1>
         
-        {{-- <form action="{{ route('comics.update') }}" method="POST" > --}}
+        <form action="{{ route('comics.update', $comic) }}" method="POST" >
         
         @csrf
         @method('PUT')
