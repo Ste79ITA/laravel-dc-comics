@@ -16,6 +16,10 @@
                         <img src="{{ $comic['thumb'] }}" alt="">
                     </div>
                     <p class="comic-title pt-2">{{ $comic['title'] }}</p>
+                    <div>
+                        <span><a href="{{ route('comics.edit', $comic) }}" class="btn btn-secondary btn-sm">Edit</a></span>
+                        <span><a href="" class="btn btn-secondary btn-sm">Delete</a></span>
+                    </div>
                 </a>
             </div>
             @endforeach
