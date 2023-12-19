@@ -15,6 +15,19 @@
 
 </head>
 
+<header>
+    <section>
+        <div class="container">
+            <nav>
+                <ul class="nav d-flex gap-2"> 
+                    <li class="nav-item"><a href="{{ route('home') }}">Home</a></li>
+                    <li class="nav-item"><a href="{{ route('comics.index') }}">Comics</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+</header>
+
 <body>
     <main class="bg-light">
 
