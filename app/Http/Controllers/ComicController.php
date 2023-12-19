@@ -6,6 +6,7 @@ use App\Http\Requests\StoreComicRequest;
 use App\Http\Requests\UpdateComicRequest;
 use App\Models\Comic;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Date;
 
 class ComicController extends Controller
 {
@@ -31,7 +32,23 @@ class ComicController extends Controller
 
     public function store(Request $request)
     {
+        // VALIDAZIONE DATI
+
         $data = $request->all();
-        dd($data);
+
+        $new_comic = new Comic();
+        $new_comic->title = $data['title'];
+        $new_comic->thumb = $data['thumb'];
+        $new_comic->price = $data['price'];
+        $new_comic->series = $data['series'];
+        $new_comic->type = $data['type'];
+        $new_comic->description = $data['description'];
+        $new_comic->sale_date = $data['sale_date'];
+
+        $new_comic->save();
+
+        // $new_comic = Comic::create($data);
+
+        return redirect()->route('comics.show', $new_comic);
     }
 }

@@ -6,7 +6,10 @@
 <section class="py-5 details">
     <div class="container d-flex flex-column pt-5">
         <h1>Create a New Comic</h1>
-        <form action="{{ route('comics.store') }}" method="POST" ></form>
+        
+        <form action="{{ route('comics.store') }}" method="POST" >
+          
+
         
         @csrf
 
@@ -37,7 +40,7 @@
 
           <div class="mb-3">
             <label for="description" class="form-label">Descrizione</label>
-            <textarea class="form-control"  id="description" rows="3" placeholder="Descrivi il fumetto"></textarea>
+            <textarea class="form-control"  id="description" rows="3" placeholder="Descrivi il fumetto" name="description"></textarea>
           </div>
 
 <input type="submit" value="Invia">         
